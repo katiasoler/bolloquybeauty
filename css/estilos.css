@@ -1,0 +1,165 @@
+/* PALETA DE COLORES */
+:root {
+  --rosa-claro-fondo: #FFF0F5;
+  --rosa-fuerte: #E91E63;
+  --rosa-transparente: rgba(233, 30, 99, 0.95);
+  --rosa-soft: #FCE4EC;
+  --blanco: #FFFFFF;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--rosa-claro-fondo);
+  color: #333;
+}
+
+/* TÍTULOS LLAMATIVOS (Estilo Vogue) */
+.titulo-llamativo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.subtitulo-llamativo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--rosa-fuerte);
+}
+
+.linea-rosa {
+  width: 80px;
+  height: 4px;
+  background-color: var(--rosa-fuerte);
+  border-radius: 2px;
+}
+
+/* NAVBAR RECTANGULAR Y TRANSPARENTE AL SCROLL */
+.navbar-moderna {
+  background-color: var(--rosa-fuerte); /* Color sólido inicial */
+  border-radius: 0 !important; /* Nunca redondeado */
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.navbar-moderna.scrolled {
+  background-color: rgba(233, 30, 99, 0.7); /* Transparencia al scrollear */
+  backdrop-filter: blur(10px);
+  padding: 10px 0 !important;
+}
+
+.navbar-moderna .nav-link {
+  color: #FFFFFF !important;
+  font-weight: 500;
+  padding: 10px 15px !important;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(233, 30, 99, 0.3));
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+/* TARJETAS ROSITAS CON IMAGEN */
+.card-estetica {
+  background-color: var(--rosa-soft);
+  border: none;
+  border-radius: 0px; /* Rectangulares para seguir el estilo de la navbar */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card-estetica:hover {
+  transform: translateY(-10px);
+}
+
+.card-estetica img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.badge-precio {
+  background-color: var(--rosa-fuerte);
+  color: white;
+  padding: 8px 15px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* ACORDEÓN Y RESTRICCIONES (ARREGLADO) */
+.accordion-estetica .accordion-button {
+  background-color: var(--rosa-soft);
+  color: #333;
+  border-radius: 0 !important;
+}
+
+.accordion-estetica .accordion-button:not(.collapsed) {
+  background-color: var(--rosa-fuerte);
+  color: white;
+}
+
+.accordion-body-rosa {
+  background-color: white; /* Fondo blanco para que el texto se vea bien */
+  padding: 20px;
+  color: #333;
+}
+
+/* Efecto Hover clarito para la restricción de embarazadas */
+.politica-destacada {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.politica-destacada:hover {
+  background-color: #ffebee; /* Rosa muy clarito al pasar el mouse */
+}
+
+/* FOOTER CON IMAGEN */
+.footer-estetica {
+  background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1280&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.footer-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(233, 30, 99, 0.85);
+}
+
+/* BOTÓN WHATSAPP */
+.btn-whatsapp {
+  position: fixed;
+  width: 60px; height: 60px;
+  bottom: 30px; right: 30px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.alert-sede-aviso {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-left: 4px solid var(--rosa-fuerte-barras) !important;
+  color: var(--texto-rosa-oscuro) !important;
+  backdrop-filter: blur(4px) !important;
+}
