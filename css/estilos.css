@@ -5,6 +5,7 @@
   --rosa-transparente: rgba(233, 30, 99, 0.95);
   --rosa-soft: #FCE4EC;
   --blanco: #FFFFFF;
+  --texto-oscuro: #333333;
 }
 
 body {
@@ -48,7 +49,7 @@ body {
   padding: 10px 0 !important;
 }
 
-.navbar-moderna .nav-link {
+.navbar-moderna .nav-link, .text-uppercase {
   color: #FFFFFF !important;
   font-weight: 500;
   padding: 10px 15px !important;
@@ -77,7 +78,7 @@ body {
 .card-estetica {
   background-color: var(--rosa-soft);
   border: none;
-  border-radius: 0px; /* Rectangulares para seguir el estilo de la navbar */
+  border-radius: 15px; /* Rectangulares para seguir el estilo de la navbar */
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -98,18 +99,20 @@ body {
   font-weight: bold;
   display: inline-block;
   margin-top: 10px;
+  border-radius: 20px !important;
 }
 
 /* ACORDEÓN Y RESTRICCIONES (ARREGLADO) */
 .accordion-estetica .accordion-button {
   background-color: var(--rosa-soft);
   color: #333;
-  border-radius: 0 !important;
+  border-radius: 15px !important;
 }
 
 .accordion-estetica .accordion-button:not(.collapsed) {
   background-color: var(--rosa-fuerte);
   color: white;
+  border-radius: 15px !important;
 }
 
 .accordion-body-rosa {
@@ -157,9 +160,68 @@ body {
   text-decoration: none;
 }
 
-.alert-sede-aviso {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border-left: 4px solid var(--rosa-fuerte-barras) !important;
+.alert {
+  background-color: rgba(238, 236, 236, 0.9) !important;
+  border-left: 5px solid var(--rosa-fuerte) !important;
   color: var(--texto-rosa-oscuro) !important;
   backdrop-filter: blur(4px) !important;
+}
+.alert-sede-aviso {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-left: 4px solid var(--rosa-fuerte) !important;
+  color: var(--texto-oscuro);
+  font-size: 1rem;
+  border-radius: 15px !important; /* Fuerza diseño rectangular */
+  max-width: 45%; /* Asegura que ocupe menos de la mitad en PC */
+}
+/* En pantallas chicas vuelve a ocupar el ancho disponible */
+@media (max-width: 991px) {
+  .alert-sede-aviso {
+    max-width: 100%;
+  }
+}
+.btn-rosa-fuerte {
+  background-color: var(--rosa-fuerte-barras);
+  color: #FFFFFF !important;
+  border-radius: 50px;
+  padding: 10px 32px;
+  font-weight: 500;
+  border: none;
+  transition: all 0.3s ease;
+}
+.btn-rosa-fuerte:hover {
+  background-color: #C2185B;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+}
+
+/* Acordeón de Políticas */
+.accordion-estetica .accordion-item {
+  background-color: var(--rosa-claro-fondo) !important;
+  border: none;
+}
+.accordion-estetica .accordion-button  {
+  background-color: var(--rosa-claro-fondo);
+  color: var(--texto-oscuro);
+  font-weight: 600;
+}
+.accordion-estetica .accordion-button:not(.collapsed) {
+  background-color: var(--rosa-fuerte);
+  color: #FFFFFF !important;
+  box-shadow: none;
+}
+.card-sede {
+  background-color: var(--rosa-card-interno) !important;
+  border-radius: 15px !important; /* Forzado sin redondeados */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(233, 30, 99, 0.25) !important;
+}
+
+.border-pink-light {
+  border-color: rgba(233, 30, 99, 0.25) !important;
+  border-radius: 15px !important; /* Remueve los bordes redondeados del div interno blanco */
+}
+.text-dark-pink {
+  color: var(--rosa-fuerte) !important;
 }
